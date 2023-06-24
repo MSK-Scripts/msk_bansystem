@@ -42,8 +42,8 @@ exports.msk_bansystem:unbanPlayer(source, banId)
 ```
 **IsPlayerBanned**
 ```lua
-local timestamp, banTime = exports.msk_bansystem:IsPlayerBanned(targetId)
-print(timestamp, banTime) -- Output: 1687639620, 24-06-2023 18:00
+local timestamp, banUntil = exports.msk_bansystem:IsPlayerBanned(targetId)
+print(timestamp, banUntil) -- Output: 1687639620, 24-06-2023 18:00
 ```
 
 ## Requirements
