@@ -1,6 +1,6 @@
 Config = {}
 ----------------------------------------------------------------
-Config.VersionChecker = false
+Config.VersionChecker = true
 Config.Debug = true
 ----------------------------------------------------------------
 -- Add the Webhook Link in server_discordlog.lua
