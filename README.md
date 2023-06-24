@@ -9,6 +9,7 @@
 
 ## Exports
 `source` can be set to `nil` if you execute it from another resource and not using a Command.
+
 **Ban**
 ```lua
 exports.msk_bansystem:banPlayer(source, targetId, time, reason)
