@@ -20,7 +20,7 @@ exports.msk_bansystem:unbanPlayer(source, banId)
 ```
 **IsPlayerBanned**
 ```lua
-exports.msk_bansystem:IsPlayerBanned(source)
+exports.msk_bansystem:IsPlayerBanned(targetId)
 ```
 
 ## Requirements
