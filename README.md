@@ -16,12 +16,17 @@ You can set the following Statements for Time:
 * P for permanent
 
 **Ban**
+
 `/ban playerID time reason`
+
 Example: `/ban 1 1H 'Banned for Cheating'` *1 Hour Ban*
+
 Example: `/ban 1 P 'Banned for Cheating'` *Permanent Ban*
 
 **Unban**
+
 `/unban banID`
+
 Example: `/unban 1`
 
 ## Exports
