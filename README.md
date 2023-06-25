@@ -1,6 +1,8 @@
 # msk_bansystem
 [STANDALONE] Simple Ban System
 
+[CFX Forum](https://forum.cfx.re/t/standalone-msk-bansystem/5126481)
+
 ## Description
 * Simple Ban System
 * Admin Commands
