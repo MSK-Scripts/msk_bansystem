@@ -70,8 +70,10 @@ if Config.Commands.enable then
 
         if src > 0 and isAllowed(src) then
             banPlayer(src, playerId, time, reason)
-        else
+        elseif src == 0 then
             banPlayer(nil, playerId, time, reason)
+        else
+            Config.Notification(src, 'You don\'t have permission to do that!')
         end
     end)
 
@@ -83,8 +85,10 @@ if Config.Commands.enable then
 
         if src > 0 and isAllowed(src) then
             unbanPlayer(src, banId)
-        else
+        elseif src == 0 then
             unbanPlayer(nil, banId)
+        else
+            Config.Notification(src, 'You don\'t have permission to do that!')
         end
     end)
 end
