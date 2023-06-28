@@ -38,11 +38,13 @@ Example: `/unban 1`
 ```lua
 exports.msk_bansystem:banPlayer(source, targetId, time, reason)
 -- Example: exports.msk_bansystem:banPlayer(source, 15, '5D', 'Banned for Cheating') -- Banned for 5 days
+-- Example: exports.msk_bansystem:banPlayer(nil, 15, '2H', 'Banned for Cheating') -- Banned for 2 hours
 ```
 **Unban**
 ```lua
 exports.msk_bansystem:unbanPlayer(source, banId)
 -- Example: exports.msk_bansystem:unbanPlayer(source, 4)
+-- Example: exports.msk_bansystem:unbanPlayer(nil, 4)
 ```
 **IsPlayerBanned**
 ```lua
