@@ -31,7 +31,7 @@ Example: `/ban 1 P 'Banned for Cheating'` *Permanent Ban*
 
 Example: `/unban 1`
 
-## Exports
+## Exports - [serverside]
 `source` can be set to `nil` if you execute it from another resource and not using a Command.
 
 **Ban**
