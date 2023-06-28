@@ -68,11 +68,16 @@ if Config.Commands.enable then
         if not playerId or not time then return end
         if not reason then reason = 'Unknown' end
 
-        if src > 0 and isAllowed(src) then
+		-- Console Ban
+		if src == 0 then
+			banPlayer(nil, playerId, time, reason)
+			return
+		end
+
+		-- In-Game Ban
+        if isAllowed(src) then
             banPlayer(src, playerId, time, reason)
-        else
-            banPlayer(nil, playerId, time, reason)
-        end
+		end
     end)
 
     RegisterCommand(Config.Commands.unban, function(source, args, raw)
@@ -81,10 +86,15 @@ if Config.Commands.enable then
 
         if not banId then return end
 
-        if src > 0 and isAllowed(src) then
+		-- Console Ban
+		if src == 0 then
+			unbanPlayer(nil, banId)
+			return
+		end
+	
+		-- In-Game Ban
+        if isAllowed(src) then
             unbanPlayer(src, banId)
-        else
-            unbanPlayer(nil, banId)
         end
     end)
 end
