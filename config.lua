@@ -12,9 +12,9 @@ Config.botAvatar = "https://i.imgur.com/PizJGsh.png"
 -- !!! This function is clientside AND serverside !!!
 Config.Notification = function(source, message)
     if IsDuplicityVersion() then -- serverside
-        MSK.Notification(source, message)
+        MSK.Notification(source, 'MSK Bansystem', message)
     else -- clientside
-        MSK.Notification(message)
+        MSK.Notification('MSK Bansystem', message)
     end
 end
 ----------------------------------------------------------------
