@@ -21,6 +21,6 @@ end
 Config.Commands = {
     enable = true, -- Set false to disable the Command
     groups = {'admin', 'god'},
-    ban = 'ban',
-    unban = 'unban'
+    ban = 'mskban',
+    unban = 'mskunban'
 }
