@@ -1,7 +1,7 @@
 -- Insert you Discord Webhook here
 local webhookLink = "https://discord.com/api/webhooks/1010886682859548754/h-uunJy8MWCnvlOsjCdgv8XaidlgV-qXjCKn6wVQhXTWk2zauHCBZ_C0mNckoIj3NHqa"
 
-banLog = function(source, bannedby, targetId, time, reason, playerIds)
+banLog = function(source, bannedby, targetId, time, reason, playerIds, banId)
 	if not Config.DiscordLog then return end
 
 	local botColor = Config.botColor
