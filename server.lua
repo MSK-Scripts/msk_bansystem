@@ -21,7 +21,7 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
     local isBanned, expired = isPlayerBanned(src, playerName)
 
     if isBanned and not expired then
-        CancelEvent()
+        CancelEvent() -- FiveM Native Function for cancelling the currently executing event
         setKickReason(('Banned by %s until %s for %s. BanID: %s'):format(isBanned.from, isBanned.time, isBanned.reason, isBanned.id))
     elseif isBanned and expired then
         unbanPlayer(nil, isBanned.id)
@@ -132,7 +132,7 @@ banPlayer = function(source, playerId, time, reason)
             logging('debug', 'Player with ID ^2' .. playerId .. '^0 was banned until ^2' .. banTime .. '^0 for Reason: ^2' .. reason .. '^0. BanID: ^2' .. response.insertId .. '^0')
             if source then Config.Notification(source, 'Player with ID ' .. playerId .. ' was banned until ' .. banTime .. ' for Reason: ' .. reason .. '. BanID: ' .. response.insertId) end
             table.insert(bannedPlayers, {id = response.insertId, ids = player, reason = reason, time = banTime, from = bannedby})
-            banLog(source, bannedby, playerId, banTime, reason, json.encode(player))
+            banLog(source, bannedby, playerId, banTime, reason, json.encode(player), response.insertId)
             DropPlayer(playerId, ('Banned by %s for %s until %s. BanID: %s'):format(bannedby, reason, banTime, response.insertId))
         end
     end)
