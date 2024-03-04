@@ -196,9 +196,7 @@ end
 
 logging = function(code, ...)
     if not Config.Debug then return end
-
-    local script = "[^2"..GetCurrentResourceName().."^0]"
-    MSK.logging(script, code, ...)
+    MSK.Logging(code, ...)
 end
 
 GithubUpdater = function()
