@@ -3,6 +3,9 @@
 
 [CFX Forum](https://forum.cfx.re/t/standalone-msk-bansystem/5126481)
 
+## Nice to know
+This resource is already integrated in `msk_core`!
+
 ## Description
 * Simple Ban System
 * Admin Commands
